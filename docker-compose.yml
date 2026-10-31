@@ -1,0 +1,11 @@
+services:
+  daytoday:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DAYTODAY_LLM_PROVIDER: ${DAYTODAY_LLM_PROVIDER:-mock}
+      DAYTODAY_LLM_MODEL: ${DAYTODAY_LLM_MODEL:-llama3.1:8b}
+      OLLAMA_HOST: ${OLLAMA_HOST:-http://host.docker.internal:11434}
+    volumes:
+      - ./data:/app/data
