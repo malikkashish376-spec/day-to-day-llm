@@ -22,19 +22,26 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Unit and integration tests
-        run: python -m pytest -q
         env:
           PYTHONPATH: src
           DAYTODAY_LLM_PROVIDER: mock
-      - name: Evaluation harness (offline, mock provider)
         run: |
-          python eval/run_eval.py --baseline
-          python eval/run_eval.py
+          # Earlier commits in this history predate the suite; skip cleanly
+          # there so every commit has a meaningful status instead of a red X.
+          if [ -d tests ]; then python -m pytest -q; else echo "no test suite at this commit"; fi
+      - name: Evaluation harness (offline, mock provider)
         env:
           PYTHONPATH: src
-      - name: Seed smoke test
+        run: |
+          if [ -f eval/run_eval.py ]; then
+            python eval/run_eval.py --baseline
+            python eval/run_eval.py
+          else
+            echo "no evaluation harness at this commit"
+          fi
+      - name: Seed and CLI smoke test
+        env:
+          PYTHONPATH: src
         run: |
           python -m daytoday.cli seed
           python -m daytoday.cli ask "plan my day"
-        env:
-          PYTHONPATH: src
