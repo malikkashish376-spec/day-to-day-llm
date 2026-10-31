@@ -1,0 +1,445 @@
+{
+  "generated_at": "2026-10-31T07:02:37",
+  "routing": {
+    "mode": "router-baseline",
+    "cases": 36,
+    "tool_accuracy": 1.0,
+    "argument_accuracy": 1.0,
+    "unsupported_number_rate": 0.0,
+    "latency_p50_ms": 0.1,
+    "latency_p95_ms": 1.9,
+    "failures": [],
+    "rows": [
+      {
+        "id": "R01",
+        "message": "remind me to submit the project synopsis by friday 5pm",
+        "expected": "add_task",
+        "predicted": "add_task",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R02",
+        "message": "add task pay the electricity bill",
+        "expected": "add_task",
+        "predicted": "add_task",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R03",
+        "message": "i need to revise graphs and dp before the mock interview",
+        "expected": "add_task",
+        "predicted": "add_task",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R04",
+        "message": "put on my list: return the borrowed reference book",
+        "expected": "add_task",
+        "predicted": "add_task",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R05",
+        "message": "remind me to book the demo slot tomorrow",
+        "expected": "add_task",
+        "predicted": "add_task",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R06",
+        "message": "i have to renew the broadband plan next week",
+        "expected": "add_task",
+        "predicted": "add_task",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R07",
+        "message": "i spent 250 on coffee",
+        "expected": "add_expense",
+        "predicted": "add_expense",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R08",
+        "message": "paid 899 for the broadband renewal",
+        "expected": "add_expense",
+        "predicted": "add_expense",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R09",
+        "message": "bought a dbms textbook for 2100",
+        "expected": "add_expense",
+        "predicted": "add_expense",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R10",
+        "message": "auto to college cost me 240",
+        "expected": "add_expense",
+        "predicted": "add_expense",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R11",
+        "message": "i spent 1.2k on a new chair",
+        "expected": "add_expense",
+        "predicted": "add_expense",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R12",
+        "message": "how much did i spend this month",
+        "expected": "spending_summary",
+        "predicted": "spending_summary",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R13",
+        "message": "what is my total spending this week",
+        "expected": "spending_summary",
+        "predicted": "spending_summary",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R14",
+        "message": "where did my money go today",
+        "expected": "spending_summary",
+        "predicted": "spending_summary",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R15",
+        "message": "show my recent transactions",
+        "expected": "list_expenses",
+        "predicted": "list_expenses",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R16",
+        "message": "list my expenses",
+        "expected": "list_expenses",
+        "predicted": "list_expenses",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R17",
+        "message": "what are my pending tasks",
+        "expected": "list_tasks",
+        "predicted": "list_tasks",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R18",
+        "message": "show me my todo list",
+        "expected": "list_tasks",
+        "predicted": "list_tasks",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R19",
+        "message": "what do i have left to do",
+        "expected": "list_tasks",
+        "predicted": "list_tasks",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R20",
+        "message": "i finished the dbms numericals",
+        "expected": "complete_task",
+        "predicted": "complete_task",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R21",
+        "message": "mark the broadband renewal as done",
+        "expected": "complete_task",
+        "predicted": "complete_task",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R22",
+        "message": "done with the mock aptitude tests",
+        "expected": "complete_task",
+        "predicted": "complete_task",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R23",
+        "message": "plan my day",
+        "expected": "plan_day",
+        "predicted": "plan_day",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R24",
+        "message": "what should i do today",
+        "expected": "plan_day",
+        "predicted": "plan_day",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R25",
+        "message": "plan for tomorrow",
+        "expected": "plan_day",
+        "predicted": "plan_day",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R26",
+        "message": "how have i been feeling",
+        "expected": "mood_trend",
+        "predicted": "mood_trend",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R27",
+        "message": "what is my mood trend",
+        "expected": "mood_trend",
+        "predicted": "mood_trend",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R28",
+        "message": "review my week",
+        "expected": "weekly_review",
+        "predicted": "weekly_review",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R29",
+        "message": "how was my week",
+        "expected": "weekly_review",
+        "predicted": "weekly_review",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R30",
+        "message": "feeling tired and drained today after the lab",
+        "expected": "log_journal",
+        "predicted": "log_journal",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R31",
+        "message": "journal: good study block this morning, graphs finally make sense",
+        "expected": "log_journal",
+        "predicted": "log_journal",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R32",
+        "message": "note that the guide meeting moved to cabin 214",
+        "expected": "add_note",
+        "predicted": "add_note",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R33",
+        "message": "what did i write about normalisation",
+        "expected": "search_notes",
+        "predicted": "search_notes",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R34",
+        "message": "what was the bcnf point i noted",
+        "expected": "search_notes",
+        "predicted": "search_notes",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R35",
+        "message": "who won the 1983 world cup",
+        "expected": "search_notes",
+        "predicted": "search_notes",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      },
+      {
+        "id": "R36",
+        "message": "when is the synopsis due",
+        "expected": "search_notes",
+        "predicted": "search_notes",
+        "tool_ok": true,
+        "args_ok": true,
+        "unsupported_numbers": []
+      }
+    ]
+  },
+  "retrieval": {
+    "cases": 10,
+    "k": 3,
+    "recall_at_k": 1.0,
+    "mrr": 1.0,
+    "details": [
+      {
+        "id": "Q1",
+        "query": "when is the project synopsis due",
+        "expected": "Project synopsis - final year",
+        "rank": 1,
+        "returned": [
+          "Project synopsis - final year",
+          "Placement prep plan",
+          "Placement prep plan"
+        ]
+      },
+      {
+        "id": "Q2",
+        "query": "how many references does the literature survey need",
+        "expected": "Project synopsis - final year",
+        "rank": 1,
+        "returned": [
+          "Project synopsis - final year"
+        ]
+      },
+      {
+        "id": "Q3",
+        "query": "what is the bcnf dependency preservation point",
+        "expected": "DBMS unit 3 revision",
+        "rank": 1,
+        "returned": [
+          "DBMS unit 3 revision"
+        ]
+      },
+      {
+        "id": "Q4",
+        "query": "isolation levels and phantom reads",
+        "expected": "DBMS unit 3 revision",
+        "rank": 1,
+        "returned": [
+          "DBMS unit 3 revision"
+        ]
+      },
+      {
+        "id": "Q5",
+        "query": "how much is the broadband renewal",
+        "expected": "Wifi and electricity notes",
+        "rank": 1,
+        "returned": [
+          "Wifi and electricity notes"
+        ]
+      },
+      {
+        "id": "Q6",
+        "query": "cylinder booking number",
+        "expected": "Wifi and electricity notes",
+        "rank": 1,
+        "returned": [
+          "Wifi and electricity notes",
+          "Placement prep plan"
+        ]
+      },
+      {
+        "id": "Q7",
+        "query": "which dsa topics should i revise for placements",
+        "expected": "Placement prep plan",
+        "rank": 1,
+        "returned": [
+          "Placement prep plan",
+          "DBMS unit 3 revision"
+        ]
+      },
+      {
+        "id": "Q8",
+        "query": "how many days a week do i go to the gym",
+        "expected": "Gym and sleep routine",
+        "rank": 1,
+        "returned": [
+          "Gym and sleep routine",
+          "Placement prep plan"
+        ]
+      },
+      {
+        "id": "Q9",
+        "query": "how should i structure the project demo",
+        "expected": "Ideas for the project demo",
+        "rank": 1,
+        "returned": [
+          "Ideas for the project demo",
+          "Ideas for the project demo",
+          "Placement prep plan"
+        ]
+      },
+      {
+        "id": "Q10",
+        "query": "target companies for placement",
+        "expected": "Placement prep plan",
+        "rank": 1,
+        "returned": [
+          "Placement prep plan",
+          "Gym and sleep routine"
+        ]
+      }
+    ]
+  }
+}

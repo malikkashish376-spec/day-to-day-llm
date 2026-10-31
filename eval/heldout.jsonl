@@ -1,0 +1,16 @@
+{"id":"H01","message":"put the synopsis submission on my plate for tuesday","expect":{"tool":"add_task"}}
+{"id":"H02","message":"gotta finish the OS assignment tonight","expect":{"tool":"add_task"}}
+{"id":"H03","message":"remind me about the viva prep at 6pm","expect":{"tool":"add_task","args":{"when_contains":"6pm"}}}
+{"id":"H04","message":"chai cost 30 rupees","expect":{"tool":"add_expense","args":{"amount":"30"}}}
+{"id":"H05","message":"spent 200 bucks on chai","expect":{"tool":"add_expense","args":{"amount":"200"}}}
+{"id":"H06","message":"how much have i been spending lately","expect":{"tool":"spending_summary"}}
+{"id":"H07","message":"give me a breakdown of my money this month","expect":{"tool":"spending_summary"}}
+{"id":"H08","message":"anything on my list for today","expect":{"tool":"list_tasks"}}
+{"id":"H09","message":"tick off the charger purchase","expect":{"tool":"complete_task"}}
+{"id":"H10","message":"the electricity bill is done","expect":{"tool":"complete_task"}}
+{"id":"H11","message":"sort out my schedule for today","expect":{"tool":"plan_day"}}
+{"id":"H12","message":"what has my energy been like this fortnight","expect":{"tool":"mood_trend"}}
+{"id":"H13","message":"summarise my week please","expect":{"tool":"weekly_review"}}
+{"id":"H14","message":"log this: skipped gym, feeling low","expect":{"tool":"log_journal"}}
+{"id":"H15","message":"find my notes on deadlock","expect":{"tool":"search_notes"}}
+{"id":"H16","message":"do i have anything about the placement cell in my notes","expect":{"tool":"search_notes"}}

@@ -1,0 +1,36 @@
+{"id":"R01","message":"remind me to submit the project synopsis by friday 5pm","expect":{"tool":"add_task","args":{"title_contains":"synopsis","when_contains":"friday"}}}
+{"id":"R02","message":"add task pay the electricity bill","expect":{"tool":"add_task","args":{"title_contains":"electricity"}}}
+{"id":"R03","message":"i need to revise graphs and dp before the mock interview","expect":{"tool":"add_task","args":{"title_contains":"graphs"}}}
+{"id":"R04","message":"put on my list: return the borrowed reference book","expect":{"tool":"add_task","args":{"title_contains":"reference book"}}}
+{"id":"R05","message":"remind me to book the demo slot tomorrow","expect":{"tool":"add_task","args":{"when_contains":"tomorrow"}}}
+{"id":"R06","message":"i have to renew the broadband plan next week","expect":{"tool":"add_task","args":{"title_contains":"broadband"}}}
+{"id":"R07","message":"i spent 250 on coffee","expect":{"tool":"add_expense","args":{"amount":"250"}}}
+{"id":"R08","message":"paid 899 for the broadband renewal","expect":{"tool":"add_expense","args":{"amount":"899"}}}
+{"id":"R09","message":"bought a dbms textbook for 2100","expect":{"tool":"add_expense","args":{"amount":"2100"}}}
+{"id":"R10","message":"auto to college cost me 240","expect":{"tool":"add_expense","args":{"amount":"240"}}}
+{"id":"R11","message":"i spent 1.2k on a new chair","expect":{"tool":"add_expense","args":{"amount":"1.2k"}}}
+{"id":"R12","message":"how much did i spend this month","expect":{"tool":"spending_summary","args":{"period":"month"}}}
+{"id":"R13","message":"what is my total spending this week","expect":{"tool":"spending_summary","args":{"period":"week"}}}
+{"id":"R14","message":"where did my money go today","expect":{"tool":"spending_summary","args":{"period":"today"}}}
+{"id":"R15","message":"show my recent transactions","expect":{"tool":"list_expenses"}}
+{"id":"R16","message":"list my expenses","expect":{"tool":"list_expenses"}}
+{"id":"R17","message":"what are my pending tasks","expect":{"tool":"list_tasks"}}
+{"id":"R18","message":"show me my todo list","expect":{"tool":"list_tasks"}}
+{"id":"R19","message":"what do i have left to do","expect":{"tool":"list_tasks"}}
+{"id":"R20","message":"i finished the dbms numericals","expect":{"tool":"complete_task","args":{"query_contains":"dbms"}}}
+{"id":"R21","message":"mark the broadband renewal as done","expect":{"tool":"complete_task"}}
+{"id":"R22","message":"done with the mock aptitude tests","expect":{"tool":"complete_task"}}
+{"id":"R23","message":"plan my day","expect":{"tool":"plan_day","args":{"when":"today"}}}
+{"id":"R24","message":"what should i do today","expect":{"tool":"plan_day"}}
+{"id":"R25","message":"plan for tomorrow","expect":{"tool":"plan_day","args":{"when":"tomorrow"}}}
+{"id":"R26","message":"how have i been feeling","expect":{"tool":"mood_trend"}}
+{"id":"R27","message":"what is my mood trend","expect":{"tool":"mood_trend"}}
+{"id":"R28","message":"review my week","expect":{"tool":"weekly_review"}}
+{"id":"R29","message":"how was my week","expect":{"tool":"weekly_review"}}
+{"id":"R30","message":"feeling tired and drained today after the lab","expect":{"tool":"log_journal"}}
+{"id":"R31","message":"journal: good study block this morning, graphs finally make sense","expect":{"tool":"log_journal"}}
+{"id":"R32","message":"note that the guide meeting moved to cabin 214","expect":{"tool":"add_note","args":{"body_contains":"cabin 214"}}}
+{"id":"R33","message":"what did i write about normalisation","expect":{"tool":"search_notes","args":{"query_contains":"normalisation"}}}
+{"id":"R34","message":"what was the bcnf point i noted","expect":{"tool":"search_notes"}}
+{"id":"R35","message":"who won the 1983 world cup","expect":{"tool":"search_notes"}}
+{"id":"R36","message":"when is the synopsis due","expect":{"tool":"search_notes"}}
