@@ -73,7 +73,8 @@ Decisions: [docs/03-design-decisions.md](docs/03-design-decisions.md)
 ## Quick start
 
 ```bash
-git clone <your-repo-url> && cd day-to-day-llm
+git clone https://github.com/malikkashish376-spec/day-to-day-llm.git
+cd day-to-day-llm
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -e .                     # installs the package + its dependencies
 
