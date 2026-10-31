@@ -9,6 +9,6 @@ Mode: **router-baseline** &middot; 36 routing cases &middot; 10 retrieval querie
 | Unsupported-number rate (groundedness) | 0.0% |
 | Retrieval recall@3 | 100.0% |
 | Retrieval MRR | 1.00 |
-| Turn latency p50 / p95 | 0.1 ms / 1.9 ms |
+| Turn latency p50 / p95 | 0.1 ms / 2.9 ms |
 
 No routing failures in this run.

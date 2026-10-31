@@ -25,6 +25,7 @@ from .db import connect, init_db
 from .llm import LLMError, get_client
 from .llm.base import LLMClient
 from .llm.mock import MockLLM, render
+from .router import route
 from .timeparse import now_local
 from .tools import build_registry
 from .tools.registry import ToolRegistry
@@ -101,6 +102,23 @@ class Agent:
         self.registry = registry or build_registry()
         self._fallback = MockLLM()
 
+    # -- retrieval gating --------------------------------------------------
+    @staticmethod
+    def _wants_retrieval(message: str) -> bool:
+        """Decide whether note retrieval belongs in this turn's prompt.
+
+        Retrieving on every turn polluted both the prompt and the UI trace:
+        "i spent 250 on coffee" was surfacing the gym routine as context. The
+        router already classifies rule-matchable turns, so we retrieve only for
+        turns it reads as knowledge questions. The model can still call
+        ``search_notes`` itself whenever it wants; this gate only controls the
+        context we volunteer.
+        """
+        calls = route(message)
+        if calls:
+            return calls[0].name == "search_notes"
+        return message.strip().endswith("?")
+
     # -- prompt ------------------------------------------------------------
     def _system_prompt(self) -> str:
         now = now_local(self.config.timezone)
@@ -138,9 +156,12 @@ class Agent:
         rounds = 0
         try:
             memory.record(conn, session_id, "user", message)
-            context = rag.build_context(conn, message, k=self.config.retrieval_k)
+            if self._wants_retrieval(message):
+                context = rag.build_context(conn, message, k=self.config.retrieval_k)
+                retrieved = rag.search_notes(conn, message, k=self.config.retrieval_k)
+            else:
+                context, retrieved = "", []
             messages = self._build_messages(conn, session_id, message, context)
-            retrieved = rag.search_notes(conn, message, k=self.config.retrieval_k)
 
             client: LLMClient = self.client
             reply = ""

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T07:02:37",
+  "generated_at": "2026-10-31T07:19:34",
   "routing": {
     "mode": "router-baseline",
     "cases": 36,
@@ -7,7 +7,7 @@
     "argument_accuracy": 1.0,
     "unsupported_number_rate": 0.0,
     "latency_p50_ms": 0.1,
-    "latency_p95_ms": 1.9,
+    "latency_p95_ms": 2.9,
     "failures": [],
     "rows": [
       {
@@ -348,9 +348,7 @@
         "expected": "Project synopsis - final year",
         "rank": 1,
         "returned": [
-          "Project synopsis - final year",
-          "Placement prep plan",
-          "Placement prep plan"
+          "Project synopsis - final year"
         ]
       },
       {
@@ -395,8 +393,7 @@
         "expected": "Wifi and electricity notes",
         "rank": 1,
         "returned": [
-          "Wifi and electricity notes",
-          "Placement prep plan"
+          "Wifi and electricity notes"
         ]
       },
       {
@@ -405,8 +402,7 @@
         "expected": "Placement prep plan",
         "rank": 1,
         "returned": [
-          "Placement prep plan",
-          "DBMS unit 3 revision"
+          "Placement prep plan"
         ]
       },
       {
@@ -415,8 +411,7 @@
         "expected": "Gym and sleep routine",
         "rank": 1,
         "returned": [
-          "Gym and sleep routine",
-          "Placement prep plan"
+          "Gym and sleep routine"
         ]
       },
       {
@@ -426,8 +421,8 @@
         "rank": 1,
         "returned": [
           "Ideas for the project demo",
-          "Ideas for the project demo",
-          "Placement prep plan"
+          "Placement prep plan",
+          "Project synopsis - final year"
         ]
       },
       {
@@ -436,8 +431,7 @@
         "expected": "Placement prep plan",
         "rank": 1,
         "returned": [
-          "Placement prep plan",
-          "Gym and sleep routine"
+          "Placement prep plan"
         ]
       }
     ]

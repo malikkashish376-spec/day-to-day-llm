@@ -86,6 +86,20 @@ The default provider is `mock`, a deterministic policy that runs the same agent
 loop with no model and no network. The dashboard is fully populated the moment it
 loads, which is what you want in front of an examiner.
 
+### See the whole flow without typing
+
+Open <http://127.0.0.1:8000/?demo=1> — the page replays six real messages through
+the live API, including the grounded refusal, so you can watch the tool traces
+populate. The same mode produced these screenshots:
+
+![dashboard](docs/screenshots/dashboard.png)
+
+![demo](docs/screenshots/demo.png)
+
+Hardware reality check: the "database" is one SQLite file and the backend is one
+Python process. A 4 GB laptop is enough, and no GPU is needed in the default
+configuration. Full details in [docs/08-running-it.md](docs/08-running-it.md).
+
 ### Switch to a real model
 
 ```bash

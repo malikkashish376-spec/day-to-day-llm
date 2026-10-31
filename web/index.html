@@ -249,8 +249,30 @@ function refreshAll() {
   refreshNotes().catch(() => {});
 }
 
+// Demo mode: open the dashboard with ?demo=1 to replay a scripted
+// conversation through the real API. Used for screenshots, the viva, and for
+// anyone who wants to see the tool traces without typing.
+const DEMO_SCRIPT = [
+  "what did i write about normalisation",
+  "who won the 1983 world cup",
+  "remind me to submit the synopsis by friday 5pm",
+  "i spent 250 on coffee",
+  "how much did i spend this month",
+  "plan my day"
+];
+
+async function runDemo() {
+  for (const message of DEMO_SCRIPT) {
+    await send(message);
+    await new Promise(resolve => setTimeout(resolve, 500));
+  }
+}
+
 refreshAll();
 setInterval(() => refreshNotes().catch(() => {}), 15000);
+if (new URLSearchParams(location.search).has("demo")) {
+  setTimeout(runDemo, 400);
+}
 </script>
 </body>
 </html>
